@@ -26,7 +26,7 @@ A Python-based tool for translating text between languages using the `googletran
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/FurqanTheGreat/CodeAlpha_Language_Translation_Tool.git
+    git clone https://github.com/RayyanGatta/CodeAlpha_Language_Translation_Tool.git
     cd CodeAlpha_Language_Translation_Tool
     ```
 
