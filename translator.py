@@ -16,6 +16,7 @@ def translate_text(text, src_language_name, dest_language_name):
         # Convert language names to codes
         src_language_code = get_language_code(src_language_name) if src_language_name else None
         dest_language_code = get_language_code(dest_language_name)
+        detected_language = ""
 
         if not dest_language_code:
             return f"Error: Destination language '{dest_language_name}' is not supported."
@@ -29,7 +30,7 @@ def translate_text(text, src_language_name, dest_language_name):
             detected_language = detection.lang
             translation = translator.translate(text, src=detection.lang, dest=dest_language_code)
 
-        return f"\tSource Language: {detected_language.capitalize()}\n\tTranslated Text ({src_language_name} -> {dest_language_name}):\n\t{translation.text}"
+        return f"\tSource Language: {detected_language.capitalize()}\n\tTranslated Text ({detected_language} -> {dest_language_name}):\n\t{translation.text}"
 
     except Exception as e:
         return f"Error during translation: {e}"
